@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="terminal">
         <div class="terminal-header">
@@ -19,11 +20,66 @@
         <div class="terminal-body">
             <p>Welcome to my portfolio terminal.</p>
             <p>Type a command to explore:</p>
-            <div class="command-line">
-                <span class="prompt">user@portfolio:</span>
-                <input type="text" class="command-input" autofocus>
-            </div>
+            <div id="output"></div>
+            <form id="terminal-form">
+                <div class="command-line">
+                    <span class="prompt">janmejay@portfolio:</span>
+                    <input type="text" class="command-input" autofocus>
+                </div>
+            </form>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('terminal-form');
+            const input = document.querySelector('.command-input');
+            const output = document.getElementById('output');
+    
+            // Define a function to handle user commands
+            function handleCommand(command) {
+                const commandLowerCase = command.toLowerCase();
+    
+                // Define custom commands and their responses
+                const commands = {
+                    'help': 'Available commands: <br>- portfolio<br>- about<br>- projects<br>- clear',
+                    'portfolio': 'This is my portfolio page. You can explore my work here.',
+                    'about': 'I am a Machine Learning Engineer with a passion for solving complex problems.',
+                    'projects': 'Check out some of my latest projects on the portfolio page.',
+                    'clear': function () {
+                        output.innerHTML = ''; // Clear the terminal
+                    }
+                };
+    
+                if (commands.hasOwnProperty(commandLowerCase)) {
+                    if (typeof commands[commandLowerCase] === 'function') {
+                        // Execute a function command
+                        commands[commandLowerCase]();
+                    } else {
+                        // Display a text response with the prompt
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${commands[commandLowerCase]}</p>`;
+                    }
+                } else {
+                    output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                    output.innerHTML += `<p>Command not found: ${command}</p>`;
+                }
+    
+                // Clear the input field
+                input.value = '';
+    
+                // Scroll to the bottom of the terminal
+                output.scrollTop = output.scrollHeight;
+            }
+    
+            // Handle form submission
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const command = input.value;
+                handleCommand(command);
+            });
+        });
+    </script>    
+    
 </body>
 </html>

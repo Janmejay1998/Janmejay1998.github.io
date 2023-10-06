@@ -53,6 +53,8 @@ body {
 
 .terminal-body {
     padding: 10px;
+    height: 150px; /* Set a fixed height for the terminal */
+    overflow-y: scroll; /* Add a vertical scrollbar when content exceeds the height */
 }
 
 .command-line {
