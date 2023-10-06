@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="terminal_styles.css">
+</head>
+
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button close"></div>
+                <div class="terminal-button minimize"></div>
+                <div class="terminal-button maximize"></div>
+            </div>
+            <div class="terminal-title">Portfolio Terminal</div>
+        </div>
+        <div class="terminal-body">
+            <p>Welcome to my portfolio terminal.</p>
+            <p>Type a command to explore:</p>
+            <div id="output"></div>
+            <form id="terminal-form">
+                <div class="command-line">
+                    <span class="prompt">janmejay@portfolio:</span>
+                    <input type="text" class="command-input" autofocus>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('terminal-form');
+            const input = document.querySelector('.command-input');
+            const output = document.getElementById('output');
+            
+            // Command history and current index
+            const commandHistory = [];
+            let historyIndex = -1;
+
+            // Define your detailed bio
+            const detailedBio = `
+            Hello, I'm Janmejay, a Machine Learning Engineer with expertise: <br> 
+            - Python <br>
+            - Data Analysis <br>
+            - Data Visualization <br>
+            I hold a Master's in Machine Learning from Stevens Institute of Technology in New Jersey, <br> 
+            where I honed my skills in Machine Learning, Deep Learning, and Big Data Technologies. <br>
+            Outside of work, I'm passionate about Data Visualization, believing that a picture can speak volumes.
+            `;
+
+            const educationInfo = `
+            - B.Tech in Computer Science and Engineering @ Manav Rachna International Institute of Research and Studies<br>
+            - MS in Machine Learning @ Stevens Institute of Technology
+            `;
+
+            const contactInfo = `
+            - jmohanty@stevens.edu <br>
+            - janmejaymohanty28899@gmail.com
+            `;
+
+            const projectsInfo = `
+            - Sentiment Analysis on Amazon Reviews <br>
+            - Efficient Algorithms for Learning from Coarse Labels <br>
+            - Predicting Annual Income of Individuals Using Classification Techniques <br>
+            - Predictive Analytics for Employee Retention using Machine Learning <br>
+            - Fact-Checking Automation: Extracting, Analyzing, and Classifying Politifact Statements <br>
+            - Machine Translation of Noisy Text (MTNT)	
+            `;
+    
+            // Define a function to handle user commands
+            function handleCommand(command) {
+                const commandLowerCase = command.toLowerCase();
+
+                // Add the command to history
+                commandHistory.unshift(command);
+                commandIndex = -1;
+    
+                // Define custom commands and their responses
+                const commands = {
+                    'help': 'Available commands: <br>- portfolio<br>- about<br>- contact<br>- education<br>- projects<br>- clear',
+                    'portfolio': 'This is my portfolio page. You can explore my work here.',
+                    'about': function () {
+                        // Display the detailed bio
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${detailedBio}</p>`;
+                    },
+                    'projects': function () {
+                        // Display projects information
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${projectsInfo}</p>`;
+                    },
+                    'contact': function () {
+                        // Display contact information
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${contactInfo}</p>`;
+                    },
+                    'education': function () {
+                        // Display educational information
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${educationInfo}</p>`;
+                    },
+                    'clear': function () {
+                        output.innerHTML = ''; // Clear the terminal
+                    }
+                };
+    
+                if (commands.hasOwnProperty(commandLowerCase)) {
+                    if (typeof commands[commandLowerCase] === 'function') {
+                        // Execute a function command
+                        commands[commandLowerCase]();
+                    } else {
+                        // Display a text response with the prompt
+                        output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                        output.innerHTML += `<p>${commands[commandLowerCase]}</p>`;
+                    }
+                } else {
+                    output.innerHTML += `<p><span class="prompt">janmejay@portfolio:</span> ${command}</p>`;
+                    output.innerHTML += `<p>Command not found: ${command}</p>`;
+                }
+    
+                // Clear the input field
+                input.value = '';
+    
+                // Scroll to the bottom of the terminal
+                output.scrollTop = output.scrollHeight;
+            }
+    
+            // Handle form submission
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const command = input.value;
+                handleCommand(command);
+            });
+
+            // Handle arrow key navigation for command history
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+
+                    if (e.key === 'ArrowUp' && commandIndex < commandHistory.length - 1) {
+                        commandIndex++;
+                    } else if (e.key === 'ArrowDown' && commandIndex > -1) {
+                        commandIndex--;
+                    }
+
+                    const commandToDisplay = commandIndex === -1 ? '' : commandHistory[commandIndex];
+                    input.value = commandToDisplay;
+                }
+            });  
+        });
+    </script>
+    
+    
+</body>
+</html>

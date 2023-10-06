@@ -4,16 +4,15 @@ body {
     padding: 0;
     background-color: #333;
     color: #fff;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
 }
 
 .terminal {
-    width: 80%;
-    max-width: 800px;
-    margin: 100px auto;
+    width: 100%;
+    height: 100vh; /* Set terminal height to 100% of viewport height */
     background-color: #000;
-    border: 1px solid #00ff00;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow */
     overflow: hidden;
 }
 
@@ -51,10 +50,12 @@ body {
     background-color: #27c93f;
 }
 
+/* Update the font-family to "Monaco" or any other monospaced font */
 .terminal-body {
     padding: 10px;
-    height: 150px; /* Set a fixed height for the terminal */
+    height: calc(100% - 40px); /* Set a fixed height for the terminal body (adjust as needed) */
     overflow-y: scroll; /* Add a vertical scrollbar when content exceeds the height */
+    font-family: Monaco, monospace; /* Use Monaco font for terminal text */
 }
 
 .command-line {

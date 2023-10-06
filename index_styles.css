@@ -1,0 +1,17 @@
+/* Style the container for the terminal-like box */
+.terminal-container {
+    width: 80%; /* Set the width to 80% of the parent container (adjust as needed) */
+    margin: 0 auto; /* Center the terminal horizontally */
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Style the iframe for the terminal content */
+.terminal-iframe {
+    width: 100%;
+    height: 200px; /* Set the initial height (adjust as needed) */
+    border: none;
+}
