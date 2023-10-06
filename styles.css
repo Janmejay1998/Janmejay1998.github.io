@@ -1,29 +1,21 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
 }
 
 .terminal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    max-width: 800px;
+    margin: 100px auto;
     background-color: #000;
     border: 1px solid #00ff00;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     overflow: hidden;
-    max-width: none;
 }
-
 
 .terminal-header {
     background-color: #00ff00;
@@ -61,7 +53,6 @@ body {
 
 .terminal-body {
     padding: 10px;
-    color: #fff;
 }
 
 .command-line {
