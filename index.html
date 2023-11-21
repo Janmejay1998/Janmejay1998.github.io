@@ -60,8 +60,8 @@
     </div>
 
     <!-- Resume Modal Section -->
-    <div id="resumeModal" class="hidden fixed w-full h-full bg-transparent justify-center items-center">
-        <div id="resumeContent" class="flex flex-col p-6 bg-white border border-gray-200 shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="width: 80%; max-width: 800px; height: 80%; max-height: 600px;">
+    <div id="resumeModal" class="hidden fixed w-full h-full bg-transparent justify-center items-center z-50">
+        <div id="resumeContent" class="flex flex-col p-8 bg-white border border-gray-200 shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="width: 80%; max-width: 800px; height: 80%; max-height: 600px; z-index: 9999;">
             <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="bottom-right-modal" onclick="closeResumeModal()">
                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
@@ -85,7 +85,7 @@
             </blockquote>  
         </div>
         <div class="flex flex-col justify-center text-center bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-            <div class="grid mb-8 border border-gray-200 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-1 bg-white dark:bg-gray-800" style="height: 100%; margin: 0; padding: 0; gap: 0;">
+            <div class="grid mb-8 border border-gray-200 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-1 bg-white dark:bg-gray-800 max-h-full" style=" margin: 0; padding: 0; gap: 0;">
                 <div class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700" style="margin: 0; padding: 0;">
                     <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">About Myself!</h3>
@@ -102,39 +102,79 @@
                             <!-- Carousel wrapper -->
                             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                                 <!-- Item 1 Card Format -->
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>                                            
-                                    <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    </div>
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <a href="https://github.com/Janmejay1998/BIA-660-WS-Web-Mining/tree/main/Final%20Project">                                            
+                                        <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                Fact-Checking Automation: Extracting, Analyzing, and Classifying Politifact Statements (Fall 2022)
+                                            </h5>
+                                            <ul class="space-y-1 text-gray-700 list-disc list-inside dark:text-gray-400"> 
+                                                <li>Managed and deployed web scraping scripts with Beautiful Soup and Selenium, extracting 15,000+ articles, enhancing fact-checking accuracy with Python and SQL</li>
+                                                <li>Executed machine learning models (K Means Clustering, Naive Bayes, SVM) using NLP techniques (NLTK, spaCy, TextBlob) to predict misinformation trends, improving accuracy by 85%</li>
+                                                <li>Automated data extraction from various sources (Twitter API, Reddit API, News API) and reduced manual effort by 60%, visualizing NLP and web mining results with Matplotlib and seaborn</li>
+                                            </ul>
+                                        </div>
+                                    </a>
                                 </div>
                                 <!-- Item 2 Card Format -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    </div>
+                                    <a href="https://github.com/Janmejay1998/CS-513-B-Knowledge-Discovery-And-Data-Mining/tree/main/CS513FinalProject">
+                                        <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                Predictive Analytics for Employee Retention using Machine Learning (Fall 2022)
+                                            </h5>
+                                            <ul class="space-y-1 text-gray-700 list-disc list-inside dark:text-gray-400">
+                                                <li>Developed and deployed predictive models using Logistic Regression, Random Forest, KNN, Naïve Bayes, and other algorithms in R Studio, R and Python programming, on HR datasets, achieving data-driven insights</li>
+                                                <li>Revamped machine learning pipeline, enhancing prediction accuracy by 20% for employee retention through algorithm optimization</li>
+                                                <li>Achieved good results with an 88.09% accuracy and 93.53% F1 score by implementing a Random Forest Classifier model, outperforming alternative approaches</li>
+                                            </ul> 
+                                        </div>
+                                    </a>
                                 </div>
                                 <!-- Item 3 Card Format -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    </div>
+                                    <a href="https://github.com/Janmejay1998/AAI-695-WS-Applied-Machine-Learning/tree/main/Final%20Project">
+                                        <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                Predicting Annual Income of Individuals Using Classification Techniques (Spring 2023)
+                                            </h5>
+                                            <ul class="space-y-1 text-gray-700 list-disc list-inside dark:text-gray-400">
+                                                <li>Employed classification techniques, including Logistic Regression, Decision Trees, Random Forest, SVM, Neural Networks, and Ensemble Methods, to predict annual income</li>
+                                                <li>Applied machine learning libraries (scikit-learn, Keras, TensorFlow) for model development and fine-tuned parameters to enhance accuracy by 18%</li>
+                                                <li>Conducted data preprocessing, feature engineering, and data visualization with Seaborn, ensuring model effectiveness and insights</li>
+                                            </ul>    
+                                        </div>
+                                    </a>
                                 </div>
                                 <!-- Item 4 Card Format -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    </div>
+                                    <a href="#">
+                                        <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                Machine Translation of Noisy Text (MTNT) (Spring 2022)
+                                            </h5>
+                                            <ul class="space-y-1 text-gray-700 list-disc list-inside dark:text-gray-400">
+                                                <li>Built and remodeled neural machine translation architectures (Transformer, LSTM, CNN), handling noisy text input</li>
+                                                <li>Implemented rigorous validation and testing procedures to prevent overfitting, using Confusion matrix and ROC Curves for performance assessment</li>
+                                                <li>Operated DyNet model via XNMT toolkit, achieving impressive BLEU score metrics: en-fr (21.77), fr-en (23.27), en-ja (9.02), ja-en (6.65) in machine translation of noisy text</li>
+                                            </ul>
+                                        </div>
+                                    </a>
                                 </div>
                                 <!-- Item 5 Card Format -->
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    </div>
+                                    <a href="#">
+                                        <div class="absolute block w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                Sentiment Analysis on Amazon Reviews (Spring 2023)
+                                            </h5>
+                                            <ul class="space-y-1 text-gray-700 list-disc list-inside dark:text-gray-400">
+                                                <li>Leveraged NLP techniques to perform sentiment analysis on Amazon reviews, achieving precision rates exceeding 90% through custom feature engineering and ETL processes using AutoML</li>
+                                                <li>Optimized workflow efficiency by 80% on large datasets, employing Vertex AI, PySpark, SQL, and Apache Spark, while designing and implementing scalable CI/CD pipelines, resulting 90% reduction processing time over 6-node GCP cluster</li>
+                                                <li>Engineered end-to-end Data Analytics and Automation systems, integrating custom visualization tools (R, Looker, Tableau, Power BI) and Large Language Models (LLMs); extracted valuable insights and summaries from extensive text data, revolutionizing agile visualization with 45% reduction in analysis time and boosting innovation</li>
+                                            </ul>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <!-- Slider indicators -->
