@@ -18,7 +18,7 @@ Three key assets I bring to the table are: <br>
 <li>Strong programming skills in Python, R, PySpark and SQL</li> 
 <li>Expertise in various ML frameworks and algorithms </li>
 <li>Proficiency in data visualization tools like Tableau, Looker and Power BI </li>
-<ol>
+</ol>
 
 Currently, my goal is to forge a career in Data Science and Machine Learning, with a focus on Data Analytics. I'm always open to collaborative opportunities and fresh perspectives, and I believe that continuous self-improvement is the key to success. <br>
 
