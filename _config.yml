@@ -60,7 +60,7 @@ author:
   #medium           : # URL
   #pinterest        : # Username
   #soundcloud       : # Username
-  steam            : "https://steamcommunity.com/profiles/76561198405469217/"
+  steam            : "76561198405469217"
   #telegram         : # URL
   #tumblr           : # Username
   twitter          : "Janmejay1998"  # Replace this with your X / Twitter handle
@@ -68,7 +68,7 @@ author:
   #weibo            : # Username
   #wikipedia        : # Username
   #xing             : # Username
-  youtube          : "theintrovertguy1198"
+  youtube          : "@theintrovertguy1198"
 
 
 # Site Settings
