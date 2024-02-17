@@ -20,7 +20,7 @@ repository               : "https://janmejay1998.github.io/"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Janmejay Mohanty.png"
+  avatar           : "Janmejay Mohanty.jpg"
   name             : "Janmejay Mohanty"
   pronouns         : "He/Him"  
   bio              : "Machine Learning Engineer"
